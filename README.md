@@ -25,14 +25,5 @@ GesturePulse is a highly optimized, client-side web application designed for rea
   * ✋ **Slap Gesture / Four-Finger Hand** (Tight finger spread check)
 
 ---
-
-## 📂 Directory Architecture
-
-```text
-gesturepulse/
-├── index.html     # Application structure, layouts, and CDN bindings
-├── style.css      # Custom UI properties, frosted glass layers, and mobile viewports
-└── script.js      # Landmark logic, mathematical distance calculations, and camera loop
-
-## developed by - Annaesha Debnath
+## Developed by- Annaesha Debnath
 
