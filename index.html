@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>gesture pulse</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic/holistic.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="loader-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Syncing Personalized Facial Geometry Engine...</p>
+    </div>
+
+    <div class="app-container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="output_canvas"></canvas>
+
+        <div class="analytics-sidebar">
+            <div class="sidebar-header">
+                <h2>Analytics</h2>
+                <div class="status-badge" id="systemStatus">
+                    <div class="status-dot"></div>
+                    <span id="statusText">System Offline</span>
+                </div>
+            </div>
+            
+            <div class="hud-card-container">
+                <div class="hud-card">
+                    <span class="hud-label">Unified Hand Gesture</span>
+                    <span class="hud-value" id="gestureDisplay">Awaiting Input...</span>
+                </div>
+
+                <div class="hud-card">
+                    <span class="hud-label">Facial Expression</span>
+                    <span class="hud-value" id="faceDisplay">Neutral 😐</span>
+                </div>
+
+                <div class="hud-card">
+                    <span class="hud-label">Total Fingers Count</span>
+                    <span class="hud-value" id="fingerDisplay">0</span>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>Engine: Dynamic Ratio Adaptive Build</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
